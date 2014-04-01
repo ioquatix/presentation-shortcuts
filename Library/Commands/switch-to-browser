@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+Dir.chdir(__dir__)
+
+system("./toggleMirrorDisplays -on")
+
+system("osascript", "-e", DATA.read)
+
+__END__
+
+# Select and play Keynote Presentation
+tell application "Safari"
+	activate
+end tell
